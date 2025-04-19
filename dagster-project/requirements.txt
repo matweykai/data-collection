@@ -10,3 +10,7 @@ fiftyone==1.4.0
 pandas==2.2.3
 
 opencv-python==4.10.0.84
+qdrant-client==1.13.3
+transformers==4.51.1
+torch==2.5.0
+torchvision==0.20.0
