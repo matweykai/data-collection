@@ -10,6 +10,7 @@ from ops.parse_sites import *
 
 dogs_time_dir = 'data/dogs_time'
 dogs_in_depth_dir = 'data/dogs_in_depth'
+merged_data_dir = 'data/merged_parsed_data'
 
 
 @dg.asset
@@ -68,7 +69,7 @@ def collected_data_from_dogs_in_depth(context: dg.AssetExecutionContext):
 
 @dg.asset(deps=[collected_data_from_dogtime, collected_data_from_dogs_in_depth])
 def merged_parsed_data(context: dg.AssetExecutionContext):
-    target_dir = Path('data/merged_parsed_data')
+    target_dir = Path(merged_data_dir)
     dogs_time_dir_path = Path(dogs_time_dir)
     dogs_in_depth_dir_path = Path(dogs_in_depth_dir)
 
